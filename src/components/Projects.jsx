@@ -32,7 +32,7 @@ export default function Projects() {
       links: [
         {
           label: 'Live Admin',
-          href: 'https://admin.parking-system.store/',
+          href: 'https://admin.parking-system.store/admin',
           primary: true,
         },
         {
