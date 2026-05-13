@@ -16,7 +16,7 @@ export default function Hero() {
       idx: '03',
     },
     {
-      num: <>CI<span className="accent">/</span>CD</>,
+      num: <>CI<span className="accent">/ </span>CD</>,
       label: 'AWS Deploy',
       idx: '04',
     },
@@ -43,7 +43,7 @@ export default function Hero() {
         </h1>
 
         <div className="role">
-          Backend-focused Full-stack Developer · 백엔드 중심 풀스택 개발자
+          Backend-focused Full-stack Developer <br/> 백엔드 중심 풀스택 개발자
         </div>
 
         <p className="intro">

@@ -1,7 +1,7 @@
 /* =========================================================
-   Portfolio — Light, refined editorial aesthetic
-   Display: Cormorant Garamond (free Bodoni-ish alternative)
-   Body:    Manrope
+   Portfolio — Modern, geometric aesthetic
+   Display: Space Grotesk
+   Body:    Inter
    ========================================================= */
 
 :root {
@@ -23,8 +23,8 @@
   --accent-soft: #d98861;
   --accent-bg: rgba(185, 84, 42, 0.08);
 
-  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
-  --sans:  'Manrope', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --serif: 'Pretendard Variable', Pretendard, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --sans:  'Pretendard Variable', Pretendard, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --mono:  'JetBrains Mono', ui-monospace, Menlo, monospace;
 
   --maxw: 1280px;
@@ -424,7 +424,7 @@ ul { list-style: none; }
 .skill-card .cat-name {
   font-family: var(--serif);
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }

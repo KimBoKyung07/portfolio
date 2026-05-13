@@ -1,11 +1,10 @@
 export default function Contact() {
-  const email = 'qhzud1207@naver.com'
+  const email = 'dev.bokyungkim@gmail.com'
 
   // Notion 이력서 완성 후 여기에 실제 공유 링크를 넣으면 됩니다.
-  const notionResumeUrl = ''
+  const notionResumeUrl = 'https://amplified-cousin-87a.notion.site/d58981dbdaee83f9b30081c2066b11e6?source=copy_link'
 
-  // public/resume/kim-bokyung-resume-public.pdf 위치에 파일을 두면 됩니다.
-  const resumePdfPath = '/resume/kim-bokyung-resume-public.pdf'
+  const resumePdfPath = '/resume.pdf'
 
   const cards = [
     notionResumeUrl && {
