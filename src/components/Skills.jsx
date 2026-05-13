@@ -11,6 +11,7 @@ export default function Skills() {
         { name: 'Spring Security / JWT', level: 'Built' },
         { name: 'JPA / QueryDSL', level: 'Built' },
         { name: 'MyBatis', level: 'Used' },
+        { name: 'Swagger', level: 'Used' },
       ],
     },
     {

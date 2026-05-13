@@ -1,13 +1,13 @@
 export default function About() {
   const timeline = [
     {
-      year: '2020 — 2025',
+      year: '2020 — 2025.07',
       title: '프로세스와 데이터를 다루던 경험',
       sub: '업무 흐름과 데이터 정합성의 중요성을 배웠습니다.',
       now: false,
     },
     {
-      year: '2025',
+      year: '2025.09',
       title: '개발자로의 전환',
       sub: '웹 개발과 Java/Spring 기반 백엔드 개발을 학습했습니다.',
       now: false,
@@ -25,7 +25,7 @@ export default function About() {
       now: false,
     },
     {
-      year: '2026 —',
+      year: '2026.05 — 현재',
       title: 'Backend-focused Full-stack Developer',
       sub: '운영 가능한 서비스 흐름을 만드는 개발자로 성장 중입니다.',
       now: true,
