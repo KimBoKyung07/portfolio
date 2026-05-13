@@ -29,8 +29,6 @@ export default function Projects() {
       ],
       impact:
         '운영자 조치 이후 paymentStatus, parkingStatus, parkingSpace 상태가 한 시점 기준으로 정리되도록 설계해 후속 정산 오류와 화면 불일치를 줄였습니다.',
-      note:
-        '관리자 페이지는 일부 기능 확인 시 로그인 권한이 필요할 수 있습니다.',
       links: [
         {
           label: 'Live Admin',
