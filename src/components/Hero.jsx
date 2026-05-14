@@ -37,7 +37,7 @@ export default function Hero() {
         </div>
 
         <h1>
-          김보경<br />
+          <span style={{ color: '#000000' }}>김보경</span><br />
           <span>Backend</span>{' '}
           <span style={{ color: 'var(--ink-mute)' }}>&</span> Infra
         </h1>
