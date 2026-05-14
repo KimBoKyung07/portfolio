@@ -33,7 +33,7 @@ export default function Contact() {
         <div className="contact-grid">
           <div>
             <div className="contact-lead">
-              <span className="italic">함께</span> 안정적인 서비스를<br />
+              <span>함께</span> 안정적인 서비스를<br />
               만들 기회를 찾고 있습니다.
             </div>
 

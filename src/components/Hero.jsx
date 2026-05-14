@@ -38,8 +38,8 @@ export default function Hero() {
 
         <h1>
           김보경<br />
-          <span className="italic">Backend</span>{' '}
-          <span style={{ color: 'var(--ink-mute)', fontStyle: 'italic' }}>&</span> Infra
+          <span>Backend</span>{' '}
+          <span style={{ color: 'var(--ink-mute)' }}>&</span> Infra
         </h1>
 
         <div className="role">
