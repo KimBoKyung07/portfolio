@@ -16,8 +16,8 @@ export default function Hero() {
       idx: '03',
     },
     {
-      num: <>CI<span className="accent">/ </span>CD</>,
-      label: 'AWS Deploy',
+      num: <>CI<span className="accent">/</span>CD</>,
+      label: 'Blue/Green',
       idx: '04',
     },
   ]
@@ -52,10 +52,16 @@ export default function Hero() {
           AWS · Docker · Jenkins로 배포 자동화까지 연결합니다.
         </p>
 
-        <a href="#projects" className="btn-primary" onClick={scrollToProjects}>
-          <span>View Projects</span>
-          <span className="arr"></span>
-        </a>
+        <div className="hero-cta">
+          <a href="#projects" className="btn-primary" onClick={scrollToProjects}>
+            <span>View Projects</span>
+            <span className="arr"></span>
+          </a>
+          <a href="https://drive.google.com/file/d/1PtaFqlvTFHBx_jLblJ5aaJIro_uZHDIG/view?usp=drive_link" className="btn-resume" target="_blank" rel="noopener noreferrer">
+            <span>Resume</span>
+            <span className="arr"></span>
+          </a>
+        </div>
       </div>
 
       <div className="hero-stats" aria-label="Highlights">

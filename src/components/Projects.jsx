@@ -5,7 +5,7 @@ export default function Projects() {
       kind: 'Final Project',
       period: '2026.04 — 2026.05',
       role: 'BE · FE · Infrastructure',
-      focus: 'Admin Ops · CI/CD',
+      focus: 'Admin Ops · Data Consistency · CI/CD',
       tags: [
         'Spring Boot',
         'Security/JWT',
@@ -18,17 +18,20 @@ export default function Projects() {
       ],
       title: 'Smart Parking Control Platform',
       subtitle: '무중단 통합 스마트 복합 주차관제 웹서비스',
-      desc:
-        'AI 번호판 인식, 상가 할인, Toss 결제, 실시간 주차공간 관리를 하나로 연결한 복합 주차관제 서비스입니다. 저는 관리자 인증/운영 기능과 배포 자동화를 중심으로 담당했습니다.',
+      desc: [
+        'AI 번호판 인식, 상가 할인, Toss 결제, 실시간 주차공간 관리를 하나로 연결한 복합 주차관제 서비스입니다.', 
+        ' 저는 관리자 인증/운영 기능과 배포 자동화를 중심으로 담당했습니다.',
+      ],
       points: [
-        '관리자 전용 SecurityFilterChain 분리 및 JWT/Redis 기반 인증·재발급 흐름 구현',
+        '관리자 전용 SecurityFilterChain 분리 및 JWT/Redis 기반 인증 · 재발급 흐름 구현',
         'QueryDSL 기반 입출차 기록 요약, 차량번호 검색, 상태 필터, 페이징, 상세 모달 구현',
-        '강제출차·할인수정 시 결제 요청, 주차세션, 주차공간 상태를 함께 정리하는 정합성 로직 구현',
-        'B1/B2 층별 주차공간 현황 조회, 60초 polling, BLOCK/EV/장애인석 구획 제어 구현',
+        '강제출차 · 할인수정 시 결제 요청, 주차세션, 주차공간 상태를 함께 정리하는 정합성 로직 구현',
+        'React Query · Zustand · Axios 기반 관리자 화면/API 연동 및 화면 상태 관리',
+        'OpenAI API와 LangChain을 활용한 관리자 AI 보고서 생성 및 응답 처리 흐름 구현',
         'AWS, Docker Compose, Jenkins 기반 CI/CD 및 Blue/Green 배포 환경 구성',
       ],
       impact:
-        '운영자 조치 이후 paymentStatus, parkingStatus, parkingSpace 상태가 한 시점 기준으로 정리되도록 설계해 후속 정산 오류와 화면 불일치를 줄였습니다.',
+        '강제출차·할인수정 이후 결제 상태, 주차 세션, 주차공간 상태가 일관되게 반영되도록 설계해 운영 화면과 데이터 흐름의 불일치를 줄이는 데 집중했습니다.',
       links: [
         {
           label: 'Live Admin',
@@ -78,11 +81,11 @@ export default function Projects() {
       desc:
         '음악/아티스트 관련 MD 쇼핑몰 플랫폼입니다. 상품 조회부터 장바구니, 주문서 작성, Toss Payments 결제, 마이페이지 주문 관리, 구매확정 기반 후기 작성까지 이어지는 사용자 구매 흐름을 담당했습니다.',
       points: [
-        'Session 기반 로그인 페이지 및 사용자 인증 흐름 구현',
-        '상품 목록, 카테고리, 아티스트별, 검색 조회 및 상품 상세 옵션/수량 선택 구현',
-        '장바구니 담기, 수량 변경, 선택 상품 삭제, 바로 주문/장바구니 주문 흐름 구현',
+        'Session 기반 로그인 및 사용자 인증 흐름 구현',
+        '상품 목록 · 상세 조회, 옵션/수량 선택, 장바구니 담기 및 수정 흐름 구현',
+        '바로 주문 · 장바구니 주문 · 주문서 작성으로 이어지는 구매 흐름 구현',
         'Toss Payments 테스트 결제 UI 연동 및 결제 성공/실패 흐름 처리',
-        '주문내역, 주문상세, 주문취소, 구매확정, 후기 작성/중복 방지/이미지 업로드 구현',
+        '주문취소, 구매확정, 후기 작성 · 중복 방지 · 이미지 업로드 로직 구현',
       ],
       impact:
         '주문 상태와 구매확정 여부에 따라 가능한 기능이 달라지는 상태 기반 비즈니스 로직을 구현하며 단순 CRUD 이상의 커머스 흐름을 경험했습니다.',

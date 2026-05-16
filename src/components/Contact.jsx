@@ -1,25 +1,26 @@
 export default function Contact() {
   const email = 'dev.bokyungkim@gmail.com'
 
-  // Notion 이력서 완성 후 여기에 실제 공유 링크를 넣으면 됩니다.
-  const notionResumeUrl = 'https://amplified-cousin-87a.notion.site/d58981dbdaee83f9b30081c2066b11e6?source=copy_link'
-
-  const resumePdfPath = '/resume.pdf'
-
   const cards = [
-    notionResumeUrl && {
+    {
       kind: 'Resume',
-      val: '노션 이력서 열람',
-      href: notionResumeUrl,
+      val: '이력서 PDF 다운로드',
+      href: '/resume.pdf',
+      download: '김보경_이력서.pdf',
+    },
+    {
+      kind: 'Cover Letter',
+      val: '자기소개서 PDF 열람',
+      href: '/coverLetter.pdf',
       external: true,
     },
     {
-      kind: 'PDF',
-      val: '이력서 PDF 다운로드',
-      href: resumePdfPath,
-      download: '김보경_이력서.pdf',
+      kind: 'GitHub',
+      val: 'github.com/KimBoKyung07',
+      href: 'https://github.com/KimBoKyung07',
+      external: true,
     },
-  ].filter(Boolean)
+  ]
 
   return (
     <section className="contact-section" id="contact">
@@ -33,8 +34,8 @@ export default function Contact() {
         <div className="contact-grid">
           <div>
             <div className="contact-lead">
-              <span>함께</span><span style={{ color: '#ffffff' }}> 안정적인 서비스를<br />
-              만들 기회를 찾고 있습니다.</span>
+              <span style={{color: '#ffffff'}}>안정적인 서비스 흐름을 </span>
+              <span>함께</span><span style={{ color: '#ffffff' }}>  만드는 개발자로 기여하고 싶습니다.</span>
             </div>
 
             <p className="contact-sub">

@@ -234,6 +234,41 @@ ul { list-style: none; }
 }
 .btn-primary:hover .arr { width: 28px; }
 
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.05rem 1.9rem;
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, padding 0.3s ease;
+}
+.btn-resume:hover { background: var(--ink); color: #fff; padding-right: 2.2rem; }
+.btn-resume .arr {
+  width: 18px; height: 1px; background: currentColor; position: relative;
+  transition: width 0.3s ease;
+}
+.btn-resume .arr::after {
+  content: ''; position: absolute; right: 0; top: -3px;
+  width: 7px; height: 7px;
+  border-right: 1px solid currentColor; border-bottom: 1px solid currentColor;
+  transform: rotate(-45deg);
+}
+.btn-resume:hover .arr { width: 28px; }
+
 /* hero stats */
 .hero-stats {
   display: grid;
@@ -834,6 +869,54 @@ ul { list-style: none; }
   text-transform: uppercase;
 }
 
+/* ============== SKILLS LAYOUT ============== */
+.skill-box {
+  background: #fff8f0;
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid #e8d5c8;
+}
+.skill-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.2rem 0;
+}
+.skill-row:not(:last-child) { border-bottom: 1px solid #e8d5c8; }
+.skill-cat-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+/* ============== NAV HAMBURGER ============== */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  cursor: pointer;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--ink);
+  border-radius: 1px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.nav.menu-open .nav-hamburger span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav.menu-open .nav-hamburger span:nth-child(2) { opacity: 0; }
+.nav.menu-open .nav-hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
 /* ============== RESPONSIVE ============== */
 @media (max-width: 880px) {
   .hero { grid-template-columns: 1fr; padding-top: 7rem; min-height: auto; }
@@ -843,4 +926,79 @@ ul { list-style: none; }
   .nav ul { gap: 0.9rem; }
   .nav ul a { font-size: 0.7rem; }
   .scroll-cue { display: none; }
+  .section-head { flex-wrap: wrap; gap: 0.75rem 1.5rem; }
+  .section-head .meta { margin-left: 0; }
+}
+
+@media (max-width: 640px) {
+  /* Nav: 햄버거 메뉴 */
+  .nav { padding: 1rem var(--pad-x); }
+  .nav .brand { font-size: 1.1rem; }
+  .nav-hamburger { display: flex; }
+  .nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(250, 247, 241, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 8px 24px -8px rgba(28, 25, 22, 0.12);
+    padding: 0.5rem 0;
+  }
+  .nav.menu-open ul { display: flex; }
+  .nav ul li { width: 100%; }
+  .nav ul a {
+    display: block;
+    font-size: 0.85rem;
+    padding: 0.9rem var(--pad-x);
+    letter-spacing: 0.15em;
+    color: var(--ink-2);
+  }
+  .nav ul a::after { display: none; }
+  .nav ul a:hover { background: var(--bg-2); color: var(--ink); }
+
+  /* Hero */
+  .hero { padding: 5.5rem var(--pad-x) 3rem; gap: 2.5rem; }
+  .hero h1 { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+  .hero .role { font-size: 1rem; }
+  .hero p.intro { font-size: 0.92rem; margin-bottom: 2rem; }
+  .hero-stats { grid-template-columns: 1fr 1fr; }
+  .stat { padding: 1.5rem 1.25rem; }
+  .stat .num { font-size: clamp(2rem, 8vw, 2.8rem); }
+
+  /* Section 공통 */
+  .section { padding: 4rem var(--pad-x); }
+  .skills-section .wrap { padding: 4rem var(--pad-x); }
+  .contact-section .wrap { padding: 4rem var(--pad-x); }
+  .section-head { margin-bottom: 2rem; padding-bottom: 1rem; }
+  .section-head h2 { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+
+  /* About */
+  .about-bio { font-size: 1.1rem; }
+  .tl-title { font-size: 1.15rem; }
+
+  /* Skills */
+  .skill-box { padding: 1.25rem 1rem; }
+  .skill-row { flex-direction: column; gap: 0.6rem; padding: 1rem 0; }
+  .skill-cat-label { min-width: unset; }
+
+  /* Projects */
+  .project { padding: 1.5rem 1.25rem; }
+  .proj-title { font-size: clamp(1.5rem, 7vw, 2rem); }
+  .proj-highlights { gap: 1rem 1.5rem; }
+  .proj-link { width: 100%; justify-content: center; font-size: 0.72rem; }
+
+  /* Contact */
+  .contact-lead { font-size: clamp(1.6rem, 7vw, 2.4rem); }
+  .contact-email { font-size: clamp(0.9rem, 3.5vw, 1.2rem); word-break: break-all; }
+  .contact-card { padding: 1.1rem 1.2rem; }
+  .contact-card .val { font-size: 1rem; }
+
+  /* Footer */
+  .footer .wrap { flex-direction: column; align-items: flex-start; gap: 0.85rem; }
+  .footer ul { flex-wrap: wrap; gap: 1rem; }
 }
