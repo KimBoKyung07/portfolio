@@ -1,22 +1,34 @@
-# Portfolio — 김보경
+# Bokyung Kim — Portfolio
 
-React + Vite 기반 포트폴리오.
+백엔드 중심 풀스택 개발자 김보경의 포트폴리오 웹사이트입니다.
 
-## 시작
+**배포 주소**: [Vercel](https://vercel.com) 을 통해 배포
 
-```bash
-npm install
-npm run dev          # http://localhost:5173
-npm run build        # 프로덕션 빌드 (dist/)
-npm run preview      # 빌드 결과 미리보기
-```
+---
 
-## 폴더 구조
+## Tech Stack
+
+| 분류 | 사용 기술 |
+|------|-----------|
+| Framework | React 18 + Vite |
+| Styling | Vanilla CSS (CSS Custom Properties) |
+| Font | Pretendard Variable, JetBrains Mono |
+| Deploy | Vercel |
+
+## Features
+
+- 반응형 디자인 (모바일 햄버거 메뉴 포함)
+- 섹션별 스무스 스크롤 네비게이션
+- Hero / About / Skills / Projects / Contact 구성
+- 이력서 PDF Google Drive 연동, 자기소개서 PDF 열람, GitHub 링크
+
+## Project Structure
 
 ```
 portfolio/
 ├── public/
-│   └── resume.pdf            ← 본인 이력서 PDF 여기에 넣으세요
+│   ├── resume.pdf
+│   └── coverLetter.pdf
 ├── src/
 │   ├── components/
 │   │   ├── Nav.jsx
@@ -24,25 +36,23 @@ portfolio/
 │   │   ├── About.jsx
 │   │   ├── Skills.jsx
 │   │   ├── Projects.jsx
-│   │   ├── Contact.jsx
-│   │   └── Footer.jsx
+│   │   └── Contact.jsx
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── styles.css
 └── index.html
 ```
 
-## 수정 포인트
+## Getting Started
 
-- `src/components/Projects.jsx` — 프로젝트 제목/설명/링크 교체
-- `src/components/Contact.jsx` — 이메일, GitHub, Notion, LinkedIn 주소
-- `src/components/About.jsx` — 타임라인 연혁
-- `public/resume.pdf` — 본인 이력서 파일
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # 프로덕션 빌드 (dist/)
+npm run preview   # 빌드 결과 미리보기
+```
 
-## Vercel 배포
+## Contact
 
-1. GitHub에 push
-2. https://vercel.com 에서 "Add New > Project"
-3. 저장소 선택 → 자동 인식 → Deploy
-
-별도 설정 불필요.
+- Email: dev.bokyungkim@gmail.com
+- GitHub: [github.com/KimBoKyung07](https://github.com/KimBoKyung07)
